@@ -1,8 +1,16 @@
 # Environment Variables
 .env
 
-# mounted volume
-sites
+# mounted volume - exclude sensitive site data
+sites/**/*.db
+sites/**/*.log
+sites/**/locks/
+sites/**/logs/
+sites/**/private/files/
+sites/**/public/files/
+sites/**/site_config.json
+# But allow site structure
+!sites/**/.gitkeep
 
 development/*
 !development/README.md
