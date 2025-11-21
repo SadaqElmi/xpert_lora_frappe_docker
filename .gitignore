@@ -36,3 +36,18 @@ venv
 
 # NodeJS
 node_modules
+
+# Home directory from container - exclude large/unnecessary files
+home/frappe-bench/logs/
+home/frappe-bench/config/pids/
+home/frappe-bench/sites/*/logs/
+home/frappe-bench/sites/*/locks/
+home/frappe-bench/sites/*/*.db
+home/frappe-bench/sites/*/*.log
+home/frappe-bench/sites/*/private/files/
+home/frappe-bench/sites/*/public/files/
+home/frappe-bench/sites/*/site_config.json
+home/frappe-bench/sites/assets/
+# Exclude standard apps (frappe, erpnext) from home - we only need custom app
+home/frappe-bench/apps/frappe/
+home/frappe-bench/apps/erpnext/
